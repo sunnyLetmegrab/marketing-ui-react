@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --light-violet: #E0E4FC
+}
+
+@layer components {
+  .footer {
+    @apply px-20 py-14 bg-[#2B2E3C] mx-[-3rem] *:text-white
+  }
+  .footer ul li{
+    @apply text-gray-300
+  }
+}

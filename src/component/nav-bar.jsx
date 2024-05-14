@@ -33,7 +33,7 @@ export default function Navbar() {
     ];
 
     return (
-        <div className='w-full flex justify-between content-center *:text-[#121212] py-5 shadow-[0_10px_10px_-15px_rgba(0,0,0,0.3)]'>
+        <div className='w-full mx-auto flex justify-between content-center *:text-[#121212] py-5 shadow-[0_10px_10px_-15px_rgba(0,0,0,0.3)]'>
             <span className='text-3xl font-semibold mx-4'>&#123;Finsweet</span>
             <div className='inline'>
                 <i className='fa-lg fa fa-bars p-2 lg:hidden inline' ></i>

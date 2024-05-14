@@ -85,11 +85,11 @@ export default function PricePage() {
                         {questions.map((item, index) => (
                             <div className='flex flex-col p-5 bg-white rounded-xl space-y-2'
                                 onClick={(e) => {
-                                    questions[index].expanded=!questions[index].expanded;
+                                    questions[index].expanded = !questions[index].expanded;
                                     setQuestions([...questions])
                                 }}
                             >
-                                <div className='flex justify-between transition-all ease-in-out duration-700 '>
+                                <div className='flex justify-between'>
                                     <p className='font-semibold text-lg'>text</p>
                                     <p className='font-semibold text-lg'> {item.expanded ? "-" : "+"}</p>
                                 </div>

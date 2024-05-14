@@ -4,14 +4,39 @@
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  --light-violet: #E0E4FC
+  --light-violet: #E0E4FC;
+  --primary: #1D2130;
 }
 
 @layer components {
-  .footer {
-    @apply px-20 py-14 bg-[#2B2E3C] mx-[-3rem] *:text-white
+
+  .container-center {
+    @apply container block mx-auto px-2
   }
-  .footer ul li{
+
+  .footer {
+    @apply lg:px-20 px-10 lg:py-14 py-8 bg-[#2B2E3C] *:text-white flex flex-col gap-y-10
+  }
+
+  .footer ul li {
     @apply text-gray-300
+  }
+
+  .button-fill {
+    @apply text-white bg-[--primary] px-6 py-3 rounded-xl
+  }
+
+  .button-outline {
+    @apply text-[var(--primary)] bg-white px-6 py-3 rounded-xl border-[1px] border-[var(--primary)]
+  }
+
+  .price-item li {
+    @apply font-semibold my-4
+  }
+}
+
+@layer utilities {
+  .spacing-responsive {
+    @apply lg:mx-auto mx-6
   }
 }

@@ -33,14 +33,21 @@ export default function Navbar() {
     ];
 
     return (
-        <div className='flex justify-between content-center *:text-[#121212] px-10 py-5 shadow-[0_10px_10px_-15px_rgba(0,0,0,0.3)]'>
-            <span className='text-3xl font-semibold'>&#123;Finsweet</span>
-            <ul className='inline'>
-                {
-                    navLinks.map((item) => <li key={item.id} className='inline mx-3'><NavLink to={item.path}>{item.title}</NavLink></li>)
-                }
+        <div className='w-full flex justify-between content-center *:text-[#121212] py-5 shadow-[0_10px_10px_-15px_rgba(0,0,0,0.3)]'>
+            <span className='text-3xl font-semibold mx-4'>&#123;Finsweet</span>
+            <div className='inline'>
+                <i className='fa-lg fa fa-bars p-2 lg:hidden inline' ></i>
+                <ul className='lg:inline hidden'>
+                    {
+                        navLinks.map((item) => <li key={item.id} className='inline mx-3'>
+                            <NavLink to={item.path}>{item.title}</NavLink></li>)
+                    }
+                </ul>
+
                 <button className='mx-4 bg-[#121212] px-5 py-2 rounded-xl text-white text-sm'>Free trial</button>
-            </ul>
+            </div>
+
+
         </div>
     );
 }

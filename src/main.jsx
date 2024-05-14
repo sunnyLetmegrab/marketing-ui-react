@@ -5,6 +5,9 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import HomePage from './pages/home.jsx';
 import ProductPage from './pages/product.jsx';
+import PricePage from './pages/price.jsx';
+import 'boxicons'
+import ContactUs from './pages/contact.jsx';
 
 
 
@@ -25,7 +28,7 @@ var routesr = createBrowserRouter(
         },
         {
           path: 'pricing',
-          element: <></>
+          element: <PricePage/>
         },
         {
           path: 'aboutus',
@@ -37,7 +40,7 @@ var routesr = createBrowserRouter(
         },
         {
           path: 'contactus',
-          element: <></>
+          element:<ContactUs/>
         },
       ]
     },

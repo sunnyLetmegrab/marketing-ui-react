@@ -6,12 +6,15 @@ import Footer from './component/footer';
 
 function App() {
 
- 
+
   return (
     <>
-      <Navbar />
-      <Outlet />
-      <Footer />
+      <div className='flex flex-col min-h-[100svh]  w-full justify-between'>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </div>
+
     </>
   )
 }

@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
     return (
         <footer className='footer'>
-            <div className='grid grid-cols-4'>
+            <div className='grid lg:grid-cols-4 sm:grid-cols-2 gap-y-10'>
                 <div className='col-span-1'>
                     <span className='font-semibold'>Company</span>
                     <ul>
@@ -41,7 +41,11 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className='flex content-center align-middle justify-center my-5'><hr className='flex-[2] self-center'></hr><span className='flex-1 text-center'> © Copyright Finsweet 2022 </span><hr className='flex-[2] self-center'></hr></div>
+            <div className='flex items-center  my-5'>
+                <div className='flex-1 h-[1px] bg-white' />
+                <span className='px-3 lg:text-base text-sm text-center whitespace-nowrap'>© Copyright Finsweet 2022</span>
+                <div className='flex-1 h-[1px] bg-white' />
+            </div>
         </footer>
     )
 }

@@ -8,6 +8,9 @@ import ProductPage from './pages/product.jsx';
 import PricePage from './pages/price.jsx';
 import 'boxicons'
 import ContactUs from './pages/contact.jsx';
+import AboutUsPage from './pages/aboutus.jsx';
+import BlogPage from './pages/blogs.jsx';
+import BlogItemPage from './pages/blog-item.jsx';
 
 
 
@@ -15,7 +18,7 @@ var routesr = createBrowserRouter(
   [
     {
       path: '/',
-      element: <App/>,
+      element: <App />,
       children: [
         {
           path: '',
@@ -28,20 +31,31 @@ var routesr = createBrowserRouter(
         },
         {
           path: 'pricing',
-          element: <PricePage/>
+          element: <PricePage />
         },
         {
           path: 'aboutus',
-          element: <></>
+          element: <AboutUsPage />
         },
         {
           path: 'blog',
-          element: <></>
+
+          children: [
+            {
+              index: true,
+              element: <BlogPage />,
+            },
+            {
+              path: ':id',
+              element: <BlogItemPage />
+            }
+          ]
         },
         {
           path: 'contactus',
-          element:<ContactUs/>
+          element: <ContactUs />
         },
+
       ]
     },
   ]

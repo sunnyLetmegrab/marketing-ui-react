@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-      <div className='flex flex-col min-h-[100svh]  w-full justify-between'>
+      <div className='flex flex-col min-h-[100svh] w-full justify-between '>
         <Navbar />
         <Outlet />
         <Footer />

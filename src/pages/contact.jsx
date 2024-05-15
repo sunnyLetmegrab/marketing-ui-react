@@ -6,14 +6,14 @@ export default function ContactUs() {
     var editTlcss = 'py-5 px-6 outline-none block w-full rounded-xl';
 
     return (
-        <div className='container-center mt-20'>
+        <div className='mt-20 container-center lg:px-6 px-10'>
             <h1 className='text-3xl text-black font-semibold text-center my-8'>Get in touch with us</h1>
-            <div className='mx-auto max-w-7xl bg-[#F0F2FE] p-14'>
-                <div className='grid grid-cols-12 gap-x-4'>
+            <div className='mx-auto max-w-7xl bg-[#F0F2FE] p-14 my-20 rounded-2xl'>
+                <div className='grid lg:grid-cols-12 gap-x-4 gap-y-10'>
                     <div className='col-span-7 flex flex-col space-y-5 p-2'>
                         <h1 className='text-3xl font-semibold text-black'>Drop us a message</h1>
                         <p className=' text-base'>We will get back to you as soon as possible.</p>
-                        <div className='grid grid-cols-2 gap-2'>
+                        <div className='grid lg:grid-cols-2 lg:gap-2 gap-x-5 gap-y-5'>
                             <input className={`${editTlcss}`} placeholder='Full name' />
                             <input className={`${editTlcss}`} placeholder='company name' />
                         </div>
@@ -47,6 +47,11 @@ export default function ContactUs() {
                     </div>
 
                 </div>
+
+            </div>
+            <div className='block mx-auto max-w-7xl'>
+                <h1 className='text-4xl text-black font-bold text-center'>Are you ready to grow your business with us?</h1>
+                <p className='my-10 block mx-auto text-center'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.</p>
             </div>
         </div>
     )

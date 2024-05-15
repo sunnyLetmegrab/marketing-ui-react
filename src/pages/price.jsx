@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import icon from './../assets/feature-icon.svg'
 import checkFill from './../assets/check-mark.svg'
+import PageHeader from '../component/page-header';
 
 export default function PricePage() {
     var [questions, setQuestions] = useState([
@@ -35,19 +36,17 @@ export default function PricePage() {
 
     return (
         <>
-            <div className='container-center max-w-5xl mt-20'>
+            <div className='max-w-5xl container-center lg:px-6 px-10'>
                 <section className='block mx-auto'>
-                    <div className='max-w-2xl mx-auto'>
-                        <p className='text-3xl font-semibold text-center'>Pricing plans that suit you</p>
-                        <p className='text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
-                    </div>
+                    <PageHeader title='Pricing plans that suit you' />
+
                     <div className='flex mx-auto w-min p-1 my-10 rounded-2xl'>
                         <button className='h-12 px-10 py-3 rounded-2xl bg-[var(--primary)] text-white'>monthly</button>
                         <button className='px-10 py-3 h-12 '>yearly</button>
                     </div>
-                    <div className='grid grid-cols-3 max-w-7xl mx-auto gap-5'>
-                        {[12, 3, 4].map((e) => (<div key={e} className='col-span-1 rounded-2xl bg-slate-300 px-10 py-8'>
-                            <div className='flex gap-2 content-center'>
+                    <div className='grid lg:grid-cols-3 max-w-7xl w-full  gap-5 justify-center'>
+                        {[12, 3, 4].map((e) => (<div key={e} className=' col-span-1 block mx-auto rounded-2xl bg-slate-300 px-10 py-8'>
+                            <div className='flex gap-x-2 content-center'>
                                 <img src={icon} atl='icon' className='size-12' />
                                 <div>
                                     <p className='text-xl font-semibold'>Regular</p>
@@ -74,10 +73,10 @@ export default function PricePage() {
                     </div>
                 </section>
 
-                <section className='grid grid-cols-12 bg-[#F0F2FE] my-20 p-10 space-x-7'>
-                    <div className='col-span-5'>
-                        <h1 className='text-4xl text-black font-bold'>Frequestly Asked Questions</h1>
-                        <p className='text-sm'>
+                <section className='grid lg:grid-cols-12 bg-[#F0F2FE] my-20 p-10  gap-x-10 space-y-10 rounded-2xl'>
+                    <div className='col-span-5 block my-auto'>
+                        <h1 className='lg:text-4xl text-3xl text-black font-bold'>Frequestly Asked Questions</h1>
+                        <p className='lg:text-base text-sm'>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt.
                         </p>
                     </div>
@@ -99,6 +98,7 @@ export default function PricePage() {
 
                     </div>
                 </section>
+
             </div>
         </>
     )

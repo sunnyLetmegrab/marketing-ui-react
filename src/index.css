@@ -8,14 +8,16 @@
   --primary: #1D2130;
 }
 
+
+
 @layer components {
 
   .container-center {
-    @apply container block mx-auto px-2
+    @apply container block mx-auto px-2 max-w-[1296px]
   }
 
   .footer {
-    @apply lg:px-20 px-10 lg:py-14 py-8 bg-[#2B2E3C] *:text-white flex flex-col gap-y-10
+    @apply max-w-[100%] container lg:px-20 px-10 lg:py-14 py-8 bg-[#2B2E3C] *:text-white flex flex-col gap-y-10
   }
 
   .footer ul li {
@@ -23,11 +25,11 @@
   }
 
   .button-fill {
-    @apply text-white bg-[--primary] px-6 py-3 rounded-xl
+    @apply text-white bg-[--primary] lg:px-6 px-4 py-3 rounded-xl lg:text-base text-sm
   }
 
   .button-outline {
-    @apply text-[var(--primary)] bg-white px-6 py-3 rounded-xl border-[1px] border-[var(--primary)]
+    @apply text-[var(--primary)] bg-white py-3 rounded-xl border-[1px] border-[var(--primary)] lg:text-base text-sm lg:px-6 px-4
   }
 
   .price-item li {
@@ -37,6 +39,26 @@
 
 @layer utilities {
   .spacing-responsive {
-    @apply lg:mx-auto mx-6
+    @apply block lg:mx-auto px-6
   }
 }
+
+/* .no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+/* .no-scrollbar {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+/* scrollbar-width: none; */
+/* Firefox */
+/* } */
+
+/* 
+.slide-content .scroller {
+  width: 1024px;
+}
+
+* {
+  outline: 1px solid #f00 !important;
+} */

@@ -6,28 +6,33 @@ import testLogo from '../assets/test-logo.svg'
 import featureIcon from '../assets/feature-icon.svg'
 import GridSection from '../component/grid-section'
 import Footer from '../component/footer'
+import PageHeader from '../component/page-header'
+import BottomContent from '../component/bottom-content'
 export default function HomePage() {
     var list = ['sdadas'];
     return (
 
-        <div className='container-center'>
-            <section className='block mx-auto w-full max-w-4xl my-20 p-10'>
-                <h1 className='  font-semibold text-center lg:text-5xl text-4xl'>The Best Software to Grow your Sales and Services</h1>
+        <div >
+            <section className='relative mx-auto w-full max-w-4xl overflow-hidden pb-20 '>
+                <section className=' block px-10 pb-10'>
+                    <PageHeader title='The Best Software to Grow your Sales and Services' />
+                    <div className='bg-white flex mx-auto border rounded-xl'>
+                        <input className='mx-auto bg-transparent h-14 w-full outline-none pl-3' placeholder='' />
+                        <button className='bg-[#121212] mr-2 my-1 rounded-xl border max-w-fit whitespace-nowrap text-white text-sm px-4'>Get free trial</button>
+                    </div>
 
-                <h6 className='text-base text-center py-5'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</h6>
-                <div className='bg-white flex mx-auto max-w-lg w-full border rounded-xl'>
-                    <input className='mx-auto bg-transparent h-14 w-full outline-none pl-3' placeholder='' />
-                    <button className='bg-[#121212] mr-2 my-1 rounded-xl border max-w-fit whitespace-nowrap text-white text-sm px-4'>Get free trial</button>
-                </div>
+                </section>
+                <div className='absolute left-[20%]  right-[20%] bottom-0 h-[200px] bg-blue-500 opacity-[.5] blur-[100px] z-[-1] rounded-full  translate-y-1/2' />
             </section>
+
             <img src='src/assets/img-dashboard.png' alt='dashboard image' className='aspect-[4000/2600] mx-auto px-5 lg:max-w-4xl' />
 
-            <section className='block my-20 max-w-7xl spacing-responsive'>
+            <section className='block my-20 max-w-7xl spacing-responsive px-5'>
                 <h4 className='text-xl text-center font-extrabold '> High-quality</h4>
                 <h6 className='text-3xl text-center py-5 font-bold'>We have the Best Solution for your Business</h6>
                 <GridSection />
             </section>
-            <section className='grid lg:grid-cols-2 my-20  max-w-7xl gap-12 spacing-responsive'>
+            <section className='grid lg:grid-cols-2 my-20  max-w-7xl gap-12 spacing-responsive px-5'>
                 <div className='col-span-1 flex justify-between  flex-col m-auto space-y-3 '>
 
                     <h3 className='text-xl'>Why should you work with us?</h3>
@@ -52,7 +57,7 @@ export default function HomePage() {
 
                 </div>
             </section>
-            <section className='grid lg:grid-cols-12 gap-10 my-20 bg-[#ecf1fb] px-20 py-10 lg:mx-[-3rem] mx-auto'>
+            <section className='grid lg:grid-cols-12 gap-10 my-20 bg-[#ecf1fb] px-20 py-10 w-full lg:mx-0 mx-auto'>
                 <div className='lg:col-span-7 my-auto lg:order-1 order-2  space-y-3'>
                     <h2 className='text-3xl font-bold'>More impressions, more conversions</h2>
                     <span className='block'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua invidunt ut labore.</span>
@@ -63,7 +68,7 @@ export default function HomePage() {
                     <img src={dbImage} alt='finace' className='lg:h-full h-80 mx-auto block' />
                 </div>
             </section>
-            <section className='grid lg:grid-cols-4 grid-cols-2  w-full  max-w-7xl flex-wrap spacing-responsive'>{[12, 3, 45, 34].map((e) => (<img className='inline' key={e} src={testLogo} alt='text-image' />))}</section>
+            <section className='grid lg:grid-cols-4 grid-cols-2  w-full  max-w-7xl flex-wrap spacing-responsive'>{[12, 3, 45, 34].map((e) => (<img className='inline-flex justify-center' key={e} src={testLogo} alt='text-image' />))}</section>
 
             <section className='grid grid-cols-2 my-20 gap-x-10 mx-auto w-full max-w-7xl gap-y-5    '>
                 <div className='lg:col-span-1 col-span-2 flex  flex-col gap-6  mx-10'>
@@ -133,12 +138,8 @@ export default function HomePage() {
                     </div>
                 </div>
             </section>
-            <section className='flex flex-col max-w-2xl w-full mx-auto justify-center content-center flex-wrap my-20'>
-                <h1 className=' lg:text-5xl text-3xl font-semibold text-center'>Are you ready to grow your business with us?</h1>
-                <p className='lg:text-base text-sm text-center my-5'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
-                </p>
-                <button className='mx-auto bg-[#121212] rounded-xl border text-white text-sm px-6 h-12 w-fit'>View Pricing</button>
-            </section>
+
+            <BottomContent />
         </div>
 
     )
